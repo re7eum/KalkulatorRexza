@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: right;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.display {
+  color: white;
+  padding: 20px;
+  background-color: #333;
+  font-size: 2.5em;
+  text-align: right;
+  border-bottom: 2px solid #ddd;
+}
+
+.flex-container-row {
+  display: flex;
+}
+
+.button {
+  flex: 1;
+  font-size: 1.5em;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: linear-gradient(180deg, #e0e0e0, #f4f4f4);
+  transition: background 0.3s, transform 0.1s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(180deg, #d4d4d4, #e8e8e8);
+  transform: translateY(-2px);
+}
+
+.double {
+  flex: 2;
+}
+
+.operator,
+.negative,
+.equals {
+  background: #ff9800;
+  color: white;
+}
+
+.operator:hover,
+.negative:hover,
+.equals:hover {
+  background: #e68a00;
+}
+
+.card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.history {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #ff9800;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+
+@media screen and (max-width: 400px) {
+  .button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .display {
+    font-size: 2em;
+  }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.calculator {
+    flex: 1;
+    margin-right: 20px; /* Space between calculator and history */
+}
+
+.history {
+    flex: 1;
+    margin-left: 20px; /* Space between history and calculator */
+}
+
+.history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history th,
+.history td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.history th {
+    background-color: #ff9800;
+    color: white;
+}
+
+.history tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.history tr:hover {
+    background-color: #f0f0f0;
+}
+
+.input-log {
+    color: #ff9800; /* Change color to make it distinguishable */
+    font-size: 1.2em;
+    padding: 10px;
+    height: 50px; /* Adjust height as necessary */
+    overflow-y: auto; /* Allow scrolling if content exceeds the height */
+    text-align: right;
+}
